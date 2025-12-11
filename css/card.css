@@ -1,0 +1,83 @@
+/* ===========================
+   NOTE CARD UI STYLES
+=========================== */
+
+.note-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Hover animation */
+.note-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Title inside the card */
+.note-card h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Content preview text */
+.note-card p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Actions section */
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button,
+.actions a {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+    background: var(--primary);
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* Hover */
+.actions button:hover,
+.actions a:hover {
+    background: var(--primary-hover);
+}
+
+/* Danger button (delete) */
+.actions .danger {
+    background: #dc2626;
+}
+
+.actions .danger:hover {
+    background: #b91c1c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .note-card {
+        padding: 16px;
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 12px;   /* adds space between buttons */
+    margin-top: 15px;
+}
